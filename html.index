@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Decorações - Cortinas e Persianas Sob Medida</title>
+    <meta name="description" content="Na Eclipse Decorações, Mara Ferreira oferece cortinas e persianas sob medida para deixar seu lar mais bonito e confortável.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles and Tailwind Config -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+
+        /* Custom animation for subtle background gradient movement */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #111827, #000000, #1f2937, #111827);
+            background-size: 400% 400%;
+            animation: gradient-animation 20s ease infinite;
+        }
+
+        /* Fade-in on scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Testimonial Slider Styles */
+        .testimonial-slider-container {
+            overflow: hidden;
+        }
+        .testimonial-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .testimonial-card {
+            flex: 0 0 100%;
+        }
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 50%;
+            }
+        }
+    </style>
+    
+    <!-- Feather Icons for UI elements -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="antialiased">
+
+    <!-- ===== Navigation Bar ===== -->
+    <header id="navbar" class="bg-black/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-800 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-white">Eclipse decorações</a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#faq" class="text-gray-300 hover:text-yellow-400 transition-colors">FAQ</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Button -->
+                <div class="flex items-center">
+                    <a href="https://wa.me/5538991483358" target="_blank" class="hidden sm:inline-block bg-yellow-500 text-black font-semibold px-5 py-2 rounded-lg hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+                        Faça um orçamento
+                    </a>
+                    <div class="md:hidden ml-4">
+                        <button id="mobile-menu-button" class="text-white hover:text-yellow-400 focus:outline-none">
+                            <i data-feather="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-yellow-400 hover:bg-gray-800">FAQ</a>
+                 <a href="https://wa.me/5538991483358" target="_blank" class="block w-full text-left bg-yellow-500/10 px-3 py-3 rounded-md text-base font-medium text-yellow-400 hover:bg-yellow-500/20">Faça um orçamento</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Hero Section ===== -->
+        <section class="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden animated-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Content -->
+                    <div class="text-center lg:text-left">
+                        <span class="fade-in inline-flex items-center bg-yellow-400/10 text-yellow-400 font-semibold px-4 py-1 rounded-full text-sm mb-4">
+                            <i data-feather="award" class="w-4 h-4 mr-2"></i> +10000 projetos entregues
+                        </span>
+                        <h1 class="fade-in text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4" style="animation-delay: 0.2s;">
+                            Transformamos sua casa em um espaço elegante e aconchegante
+                        </h1>
+                        <p class="fade-in text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8" style="animation-delay: 0.4s;">
+                            Na Eclipse Decorações, Mara Ferreira oferece cortinas e persianas sob medida para deixar seu lar mais bonito e confortável.
+                        </p>
+                        <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6" style="animation-delay: 0.6s;">
+                            <a href="https://wa.me/5538991483358" target="_blank" class="bg-yellow-500 text-black font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                                Agendar Orçamento
+                            </a>
+                            <a href="https://wa.me/5538991483358" target="_blank" class="bg-gray-800 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 w-full sm:w-auto flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943s-.182-.133-.38-.232z"/>
+                                </svg>
+                                Fale no WhatsApp
+                            </a>
+                        </div>
+                        <p class="fade-in text-sm text-gray-400 max-w-md mx-auto lg:mx-0" style="animation-delay: 0.8s;">
+                            +1.100 seguidores no Instagram e dezenas de lares transformados com aconchego e estilo.
+                        </p>
+                    </div>
+                    <!-- Right Column: Image -->
+                    <div class="fade-in flex items-center justify-center" style="animation-delay: 0.3s;">
+                        <img src="ChatGPT Image 10 de set. de 2025, 07_39_13.jpg" alt="Imagem de uma sala de estar elegante com cortinas sob medida" class="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-none transform lg:rotate-3 transition duration-500 hover:rotate-0 hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Credibility Logos ===== -->
+        <section class="py-12 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm font-semibold text-gray-400 mb-6">PARCEIROS QUE CONFIAM NO NOSSO TRABALHO</p>
+                <div class="fade-in flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12 lg:gap-x-16">
+                    <img src="https://placehold.co/150x50/111827/ffffff?text=Google+Cloud" alt="Logo Google Cloud Partner" class="h-8 md:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="https://placehold.co/150x50/111827/ffffff?text=Margalinda" alt="Logo Margalinda suplementos" class="h-8 md:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="https://placehold.co/150x50/111827/ffffff?text=Carro+forte" alt="Logo Carro forte" class="h-8 md:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Features Section ===== -->
+        <section id="features" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="fade-in text-3xl md:text-4xl font-extrabold text-white tracking-tight">Funcionalidades para seu Conforto</h2>
+                    <p class="fade-in mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Soluções completas para transformar cada janela em uma obra de arte funcional.</p>
+                </div>
+
+                <!-- Main Feature Card -->
+                <div class="fade-in bg-gray-800 p-8 md:p-12 rounded-2xl shadow-lg border border-gray-700 mb-8 transition-all duration-300 hover:shadow-yellow-500/10 hover:shadow-xl hover:-translate-y-1">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                             <span class="inline-flex items-center bg-yellow-400/10 text-yellow-400 font-semibold px-3 py-1 rounded-full text-xs mb-3">
+                                Destaque
+                            </span>
+                            <h3 class="text-2xl font-bold text-white mb-3">Consultoria de Decoração Personalizada</h3>
+                            <p class="text-gray-300">Nossa especialista Mara Ferreira vai até você para entender seu estilo, analisar a iluminação e a arquitetura do espaço. O resultado é um projeto único, que harmoniza perfeitamente com seu ambiente e suas necessidades.</p>
+                        </div>
+                        <img src="ChatGPT Image 10 de set. de 2025, 07_45_13.jpg" alt="Consultoria de Decoração" class="rounded-xl w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- Secondary Feature Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="fade-in bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-yellow-500/50">
+                        <i data-feather="shield" class="w-8 h-8 text-yellow-500 mb-4"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Materiais de Alta Qualidade</h4>
+                        <p class="text-gray-400 text-sm">Trabalhamos com tecidos e componentes duráveis para garantir sofisticação e longevidade.</p>
+                    </div>
+                    <div class="fade-in bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-yellow-500/50">
+                        <i data-feather="sliders" class="w-8 h-8 text-yellow-500 mb-4"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Cortinas e Persianas sob medida</h4>
+                        <p class="text-gray-400 text-sm">Ajuste perfeito para suas janelas, valorizando cada detalhe do seu ambiente com exclusividade.</p>
+                    </div>
+                    <div class="fade-in bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-yellow-500/50">
+                        <i data-feather="home" class="w-8 h-8 text-yellow-500 mb-4"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Ambientes Aconchegantes</h4>
+                        <p class="text-gray-400 text-sm">Controle a luminosidade e a privacidade para criar espaços mais confortáveis e sofisticados.</p>
+                    </div>
+                    <div class="fade-in bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-yellow-500/50">
+                        <i data-feather="headphones" class="w-8 h-8 text-yellow-500 mb-4"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Suporte e Pós-venda Dedicado</h4>
+                        <p class="text-gray-400 text-sm">Estamos sempre disponíveis para garantir sua total satisfação, mesmo após a instalação.</p>
+                    </div>
+                    <div class="fade-in bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-yellow-500/50">
+                        <i data-feather="feather" class="w-8 h-8 text-yellow-500 mb-4"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Design Funcional e Elegante</h4>
+                        <p class="text-gray-400 text-sm">Unimos estética e praticidade em soluções que complementam seu estilo de vida.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== "Why Choose" Section ===== -->
+        <section id="why-us" class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="fade-in text-3xl md:text-4xl font-extrabold text-white tracking-tight">Por que escolher a Eclipse?</h2>
+                    <p class="fade-in mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Nosso compromisso é com a sua satisfação, do primeiro contato à instalação final.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+                    <div class="fade-in">
+                        <div class="flex items-center justify-center bg-gray-800 rounded-full w-16 h-16 mx-auto mb-4"><i data-feather="crop" class="w-8 h-8 text-yellow-500"></i></div>
+                        <p class="text-gray-300">Soluções sob medida que valorizam cada detalhe do seu ambiente.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 100ms;">
+                        <div class="flex items-center justify-center bg-gray-800 rounded-full w-16 h-16 mx-auto mb-4"><i data-feather="award" class="w-8 h-8 text-yellow-500"></i></div>
+                        <p class="text-gray-300">Materiais de alta qualidade, garantindo durabilidade e sofisticação.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 200ms;">
+                        <div class="flex items-center justify-center bg-gray-800 rounded-full w-16 h-16 mx-auto mb-4"><i data-feather="users" class="w-8 h-8 text-yellow-500"></i></div>
+                        <p class="text-gray-300">Atendimento próximo e personalizado, com foco no que sua casa precisa.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 300ms;">
+                        <div class="flex items-center justify-center bg-gray-800 rounded-full w-16 h-16 mx-auto mb-4"><i data-feather="tool" class="w-8 h-8 text-yellow-500"></i></div>
+                        <p class="text-gray-300">Instalação profissional rápida e limpa, sem dores de cabeça.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 400ms;">
+                        <div class="flex items-center justify-center bg-gray-800 rounded-full w-16 h-16 mx-auto mb-4"><i data-feather="smile" class="w-8 h-8 text-yellow-500"></i></div>
+                        <p class="text-gray-300">Suporte e pós-venda atencioso, para garantir sua satisfação total.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Testimonials Section ===== -->
+        <section id="testimonials" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="fade-in text-3xl md:text-4xl font-extrabold text-white tracking-tight">Lares Felizes, Clientes Satisfeitos</h2>
+                    <p class="fade-in mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Veja o que dizem sobre nosso trabalho.</p>
+                </div>
+
+                <div class="fade-in relative">
+                    <div class="testimonial-slider-container">
+                        <div class="testimonial-slider">
+                            <!-- Testimonial Card 1 -->
+                            <div class="testimonial-card px-4">
+                                <div class="bg-gray-800 p-8 rounded-2xl shadow-md h-full flex flex-col border border-gray-700">
+                                    <div class="flex items-center mb-4">
+                                        <img src="https://placehold.co/50x50/eab308/111827?text=AP" alt="Avatar de Ana Paula" class="w-12 h-12 rounded-full mr-4">
+                                        <div>
+                                            <h5 class="font-bold text-white">Ana Paula</h5>
+                                            <p class="text-sm text-gray-400">Cliente Residencial</p>
+                                        </div>
+                                        <div class="ml-auto flex text-yellow-400">
+                                            <!-- 5 stars -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-gray-300 italic flex-grow">
+                                        "A Eclipse transformou minha sala em um ambiente totalmente novo. As cortinas sob medida deram elegância e aconchego. O atendimento da Mara foi impecável, parecia que ela entendia exatamente o que eu queria!"
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <!-- Testimonial Card 2 -->
+                            <div class="testimonial-card px-4">
+                                <div class="bg-gray-800 p-8 rounded-2xl shadow-md h-full flex flex-col border border-gray-700">
+                                    <div class="flex items-center mb-4">
+                                        <img src="https://placehold.co/50x50/eab308/111827?text=CH" alt="Avatar de Carlos Henrique" class="w-12 h-12 rounded-full mr-4">
+                                        <div>
+                                            <h5 class="font-bold text-white">Carlos Henrique</h5>
+                                            <p class="text-sm text-gray-400">Empresário</p>
+                                        </div>
+                                        <div class="ml-auto flex text-yellow-400">
+                                            <!-- 5 stars -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.868 2.884c.321-.662 1.215-.662 1.536 0l1.861 3.842 4.23.615c.731.106 1.022.992.494 1.503l-3.06 2.983.722 4.212c.125.724-.639 1.28-1.29.953L10 15.179l-3.777 1.985c-.65.328-1.415-.229-1.29-.953l.722-4.212L2.59 8.844c-.528-.511-.237-1.397.494-1.503l4.23-.615 1.861-3.842z" clip-rule="evenodd" /></svg>
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-gray-300 italic flex-grow">
+                                        "Instalei persianas no meu escritório e fiquei impressionado com a qualidade. A instalação foi rápida, sem bagunça, e o resultado deixou o espaço muito mais sofisticado. Recomendo de olhos fechados!"
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Slider Controls -->
+                    <div class="md:hidden flex justify-center mt-6 gap-3">
+                        <button id="prevBtn" class="bg-gray-800 p-2 rounded-full shadow-md text-white hover:bg-gray-700 transition"><i data-feather="arrow-left" class="w-5 h-5"></i></button>
+                        <button id="nextBtn" class="bg-gray-800 p-2 rounded-full shadow-md text-white hover:bg-gray-700 transition"><i data-feather="arrow-right" class="w-5 h-5"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ Section ===== -->
+        <section id="faq" class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="fade-in text-3xl md:text-4xl font-extrabold text-white tracking-tight">Perguntas Frequentes</h2>
+                    <p class="fade-in mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Tudo o que você precisa saber antes de transformar seu ambiente.</p>
+                </div>
+                <div class="fade-in max-w-3xl mx-auto space-y-4">
+                    <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-5 text-left font-semibold text-white">
+                            <span>Como funciona o orçamento inicial?</span>
+                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-gray-300">
+                                Realizamos uma visita técnica ou atendimento online para entender suas necessidades, tirar medidas e indicar as melhores opções. Em até 3 dias você recebe um orçamento detalhado e personalizado.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-5 text-left font-semibold text-white">
+                            <span>Quanto tempo demora para entregar e instalar?</span>
+                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-gray-300">
+                                O prazo varia conforme o modelo escolhido e a personalização. Em média, a produção leva de 10 a 20 dias úteis, e a instalação é agendada logo em seguida, feita pela nossa equipe profissional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-5 text-left font-semibold text-white">
+                            <span>Preciso entender de decoração para escolher?</span>
+                             <i data-feather="chevron-down" class="faq-icon w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-gray-300">
+                                Não precisa! Nossa equipe orienta em cada etapa, ajudando você a escolher tecidos, cores e modelos que combinam com o seu ambiente, garantindo praticidade e aconchego.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Final CTA Section ===== -->
+        <section id="contact" class="py-16 md:py-24 animated-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-black/80 backdrop-blur-lg p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="text-center md:text-left">
+                            <h2 class="fade-in text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">Pronto para transformar seu espaço?</h2>
+                            <p class="fade-in text-lg text-gray-300 mb-8">
+                                Faça um orçamento sem custo e descubra como podemos deixar sua casa ainda mais especial.
+                            </p>
+                            <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                                <a href="https://wa.me/5538991483358" target="_blank" class="bg-yellow-500 text-black font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                                    Agendar Orçamento
+                                </a>
+                                <a href="https://wa.me/5538991483358" target="_blank" class="bg-gray-800 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 w-full sm:w-auto flex items-center justify-center gap-2">
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943s-.182-.133-.38-.232z"/></svg>
+                                    Fale no WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fade-in flex items-center justify-center">
+                           <img src="ChatGPT Image 10 de set. de 2025, 07_39_13.jpg" alt="Imagem de um ambiente residencial com decoração moderna" class="rounded-xl shadow-lg w-full max-w-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-black text-slate-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-sm order-2 sm:order-1 mt-4 sm:mt-0">
+                    Eclipse decorações © 2025. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-4 order-1 sm:order-2">
+                    <a href="https://wa.me/5538991483358" target="_blank" class="hover:text-yellow-400 transition-colors" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943s-.182-.133-.38-.232z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/eclipsedecoracoesmoc?igsh=MTY0czZjMDhuc3h1Nw==" target="_blank" class="hover:text-yellow-400 transition-colors" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.556 0 5.829 0 8s.01 2.444.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.556 15.99 5.829 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.444 16 10.171 16 8s-.01-2.444-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.942-.372C10.444.01 10.171 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.486a2.5 2.5 0 0 1-.599.92 2.5 2.5 0 0 1-.92.598c-.283.11-.706.24-1.486.275-.843.038-1.096.047-3.232.047s-2.389-.008-3.232-.047c-.78-.036-1.203-.166-1.486-.275a2.5 2.5 0 0 1-.92-.599 2.5 2.5 0 0 1-.598-.92c-.11-.282-.24-.705-.275-1.486-.038-.843-.046-1.096-.046-3.232s.008-2.389.046-3.232c.036-.78.166-1.204.275-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.486-.275.843-.039 1.096-.047 3.232-.047zM8 4.865a3.135 3.135 0 1 0 0 6.27 3.135 3.135 0 0 0 0-6.27zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.125-6.202a.938.938 0 1 0 0 1.875.938.938 0 0 0 0-1.875z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Feather Icons Replacement ---
+            feather.replace();
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuIcon.setAttribute('data-feather', 'menu');
+                } else {
+                    mobileMenuIcon.setAttribute('data-feather', 'x');
+                }
+                feather.replace(); // Re-run feather to draw the new icon
+            });
+
+            // --- Sticky Navbar Background ---
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('shadow-md', 'bg-white/95');
+                } else {
+                    navbar.classList.remove('shadow-md', 'bg-white/95');
+                }
+            });
+
+            // --- FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+
+                question.addEventListener('click', () => {
+                    const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
+                            otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Open or close the clicked item
+                    if (isOpen) {
+                        answer.style.maxHeight = '0px';
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // --- Fade-in on Scroll Animation ---
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- Testimonial Slider (for mobile) ---
+            const slider = document.querySelector('.testimonial-slider');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slides = document.querySelectorAll('.testimonial-card');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            function updateSliderPosition() {
+                 if (window.innerWidth < 768) { // Only works on mobile
+                    const offset = -currentIndex * 100;
+                    slider.style.transform = `translateX(${offset}%)`;
+                 } else {
+                     slider.style.transform = 'translateX(0%)'; // Reset for desktop
+                 }
+            }
+            
+            if(prevBtn && nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSliderPosition();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateSliderPosition();
+                });
+            }
+            
+            window.addEventListener('resize', updateSliderPosition);
+            updateSliderPosition(); // Initial call
+        });
+    </script>
+</body>
+</html>
